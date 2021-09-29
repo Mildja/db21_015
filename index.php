@@ -5,8 +5,8 @@ if(isset($_GET['controller'])&&isset($GET['action']))
     $action = $_GET['action'];
 }else
 {
-    $controller = 'pages','Quotation';
-    $action = 'home','index_Quatation';
+    $controller = 'pages';
+    $action = 'home';
 }?>
 <html>
     <head></head>
