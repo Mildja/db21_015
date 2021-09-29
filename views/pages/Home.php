@@ -1,1 +1,1 @@
-<p>Welcome to our homepage รักทุกคนนะครับ</p>
+<p>Welcome to our homepage เว็บเวร</p>
