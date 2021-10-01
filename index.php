@@ -20,10 +20,6 @@ if(isset($_GET['controller'])&&isset($_GET['action']))
         [<a href="?controller=QuotationDetails&action=index_QuotationDetails">QuotationDetails</a>]
         <br>
         <?php require_once("./routes.php");?>
-        <p>Welcome to our homepage เว็บเวร</p>
-
-        <p>ปลาบู่ทองทอดน้ำปลา</p>
-
-        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Ftwitter.com%2Fns__mindmint%2Fstatus%2F1087588023112364033&psig=AOvVaw0BLuBP0fysMRML3juMRMW7&ust=1633192420492000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCND5j4TSqfMCFQAAAAAdAAAAABAQ" />
+        
     </body>
 </html>
