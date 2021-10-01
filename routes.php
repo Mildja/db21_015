@@ -1,10 +1,6 @@
 <?php
-<<<<<<< HEAD
-$controllers = array('pages'=>['home', 'error'],'QuotationDetails'=>['index']); //list controller
-=======
-$controllers = array('pages'=>['home', 'error']
-                     'Quotation'=>['index_Quotation']); //list controller
->>>>>>> afdf92d673da52558b1bed73baf74f6be92c6e98
+$controllers = array('pages'=>['home', 'error'],'Quotation'=>['index_Quotation'],'QuotationDetails'=>['index']); //list controller
+
 
 function call($controller, $action){
     require_once("controller/".$controller."_controller.php");
@@ -12,21 +8,13 @@ function call($controller, $action){
     {
         case "pages":  $controller = new PagesController();
                       break;
-<<<<<<< HEAD
+        case "Quotation":   require_once("models/Quotation_models.php");
+                                $controller = new QuotationController();
+                                break;
         case "QuotationDetails": require_once("models/QuotationDetails_models.php");
                                 $controller = new QuotationDetails_controller();
                                 break;
-
-
-
-
-
-=======
-        case "Quotation":   require_once("models/Quotation_models.php");
-                            $controller = new QuotationController();
-                            break;
->>>>>>> afdf92d673da52558b1bed73baf74f6be92c6e98
-
+        
                       
     }
 
