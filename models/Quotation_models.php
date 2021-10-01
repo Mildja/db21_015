@@ -22,7 +22,7 @@ class Quotation{
         $QuotationList = [];
         require("connection_connect.php");
         $sql = "select * from Quotation";
-        $result = conn->query($sql);
+        $result = $conn->query($sql);
         while($row = $result->fetch_assoc())
         {
             $ID = $row[Q_ID];
