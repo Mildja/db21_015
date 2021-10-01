@@ -21,7 +21,7 @@ class Quotation{
     {
         $QuotationList = [];
         require("connection_connect.php");
-        $sql = "select * from Quotation";
+        $sql = "SELECT * from Quotation";
         $result = $conn->query($sql);
         while($row = $result->fetch_assoc())
         {
