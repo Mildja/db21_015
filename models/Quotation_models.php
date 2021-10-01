@@ -31,7 +31,7 @@ class Quotation{
             $cusID = $row[Cus_ID];
             $payment = $row[Q_payment];
             $percent = $row[Q_percent];
-            $QuatationList[] = new Quotation($ID,$date,$empid,$cusid,$payment,$percent);
+            $QuotationList[] = new Quotation($ID,$date,$empid,$cusid,$payment,$percent);
         }
         require("connection_close.php")
 
