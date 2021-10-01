@@ -1,3 +1,4 @@
+<div Align ="Center">
 <table border = 1>
         new order <a href=?controller=QuotationDetails&action=NewQuotationDetails> click</a><br>
         <tr>
@@ -27,3 +28,4 @@
 }
 echo "</table>";
 ?>
+</div>

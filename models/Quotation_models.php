@@ -37,7 +37,7 @@ class Quotation{
 
         return $QuotationList;
     }
-
+/*
     public static function get($ID)
     {
         require("connection_connect.php");
@@ -75,7 +75,7 @@ class Quotation{
 
         return $QuotationList;
     }
-
+*/
     public static function add($ID,$date,$empID,$cusID,$payment)
     {
         require("connection_connect.php");

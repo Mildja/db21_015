@@ -1,3 +1,5 @@
+
+<div Align ="Center">
 <table border = 1>
     <tr>
         <td>ID</td>
@@ -24,4 +26,5 @@ foreach($Quotation_List as $Quotation)
 }
 echo "</table>";
 ?>
+</div>
 
