@@ -7,11 +7,8 @@ function call($controller, $action){
     {
         case "pages":  $controller = new PagesController();
                       break;
-
-
-
-
-
+        case "Quotation": $controller = new QuotationController();
+                        break;
 
                       
     }
