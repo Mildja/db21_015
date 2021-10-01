@@ -11,6 +11,7 @@
         </tr>
 <?php foreach($QuotationDetails_list as $QuotationDetails)
 {
+        echo"สัส";
         echo "<tr>
                 <td>$QuotationDetails->ID</td>
                 <td>$QuotationDetails->Q_ID</td>
