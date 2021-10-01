@@ -21,7 +21,7 @@ tr:hover{background-color:#f5f5f5}
 <body>
 <br>
 <table style="width:80%">
-<tr bgcolor = "skyblue">
+<tr bgcolor = "lightblue">
         <td>ID</td>
         <td>Date</td>
         <td>Emp_ID</td>
