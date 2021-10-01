@@ -42,7 +42,7 @@
             $Color_ID = $my_row["Color_ID"];
             $NumOfProduct = $my_row["NumOfProduct"];
             $NumColorScreen = $my_row["NumColorScreen"];
-            $QuotationDetailslist [] = new QuotationDetails($ID,$Q_ID,$P_ID,$Color_ID,$NumOfProduct,$NumColorScreen);
+            $QuotationDetailslist[] = new QuotationDetails($ID,$Q_ID,$P_ID,$Color_ID,$NumOfProduct,$NumColorScreen);
         }
         require("connection_close.php");
         return $QuotationDetailslist;
