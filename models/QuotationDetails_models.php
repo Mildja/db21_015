@@ -29,7 +29,7 @@
     }
 
     public static function getAll(){
-        $QuotationDetails_list = [];
+        $QuotationDetailslist = [];
         require("connection_connect.php");
         $sql = "SELECT * FROM Product_list";
         $result = $conn->query($sql);
@@ -42,7 +42,7 @@
             $Orderdetail_list[] = new QuotationDetails($ID,$Q_ID,$Color_ID,$NumOfProduct,$NumColorScreen);
         }
         require("connection_close.php");
-        return $Orderdetail_list;
+        return $QuotationDetailslist;
     }
 
     public static function add($ID,$Q_ID,$Color_ID,$NumOfProduct,$NumColorScreen){
