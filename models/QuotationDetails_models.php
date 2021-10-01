@@ -7,7 +7,7 @@
         public $NumOfProduct;
         public $NumColorScreen;
 
-    public function __constuct($ID,$Q_ID,$P_ID,$Color_ID,$NumOfProduct,$NumColorScreen){
+    public function __construct($ID,$Q_ID,$P_ID,$Color_ID,$NumOfProduct,$NumColorScreen){
             $this->ID=$ID;
             $this->Q_ID=$Q_ID;
             $this->P_ID=$P_ID;
