@@ -37,11 +37,11 @@ class Quotation{
 
         return $QuotationList;
     }
-/*
+
     public static function get($ID)
     {
         require("connection_connect.php");
-        $sql = "" //เชื่อมฐานข้อมูล cus+emp+quota 35
+        $sql = "SELECT * from Quotation Natural JOIN Customer Natural JOIN Employee where Emp_ID='$empID' and Cus_ID='$cusID'";
         $result = $conn->query($sql);
         $row = $result->fetch_assoc();
         $ID = $row[Q_ID];
@@ -59,7 +59,7 @@ class Quotation{
     {
         $QuotationList = [];
         require("connection_connect.php");
-        $sql = "" //เงื่อนไขต่างๆนาๆ 37
+        $sql = "SELECT * from Quotation Natural JOIN Customer Natural JOIN Employee where (Q_ID like'%$key%' or Emp_ID like'%$key%' or Cus_ID like'%$key%')";
         $result = $conn->query($sql);
         while($row = $result->fetch_assoc())
         {
@@ -75,7 +75,7 @@ class Quotation{
 
         return $QuotationList;
     }
-*/
+
     public static function add($ID,$date,$empID,$cusID,$payment)
     {
         require("connection_connect.php");
