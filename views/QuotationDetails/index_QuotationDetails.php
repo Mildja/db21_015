@@ -1,7 +1,7 @@
 <table border = 1>
 
 <tr>
-<td>PL_ID</td>
+<td>ID</td>
 <td>Q_ID</td>
 <td>P_ID</td>
 <td>Color_ID</td>
@@ -11,7 +11,7 @@
 <?php foreach($QuotationDetails_list as $QuotationDetails)
 {
         echo "<tr>
-        <td>$QuotationDetails->PL_ID</td>
+        <td>$QuotationDetails->ID</td>
         <td>$QuotationDetails->Q_ID</td>
         <td>$QuotationDetails->P_ID</td>
         <td>$QuotationDetails->Color_ID</td>
