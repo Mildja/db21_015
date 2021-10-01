@@ -1,5 +1,5 @@
 <table border = 1>
-
+        new order <a href=?controller=QuotationDetails&action=NewQuotationDetails> click</a><br>
         <tr>
                 <td>ID</td>
                 <td>Q_ID</td>
