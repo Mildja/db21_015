@@ -7,7 +7,7 @@ class Quotation{
     public $payment;
     public $percent;
 
-    public function__construct($ID,$date,$empid,$cusid,$payment,$percent)
+    public function __construct($ID,$date,$empid,$cusid,$payment,$percent)
     {
         $this->ID = $ID;
         $this->date = $date;
