@@ -7,7 +7,7 @@ class Quotation{
     public $payment;
     public $percent;
 
-    public function __construct($ID,$date,$empid,$cusid,$payment,$percent)
+    public function __construct($ID,$date,$empID,$cusID,$payment,$percent)
     {
         $this->ID = $ID;
         $this->date = $date;
@@ -31,7 +31,7 @@ class Quotation{
             $cusID = $row[Cus_ID];
             $payment = $row[Q_payment];
             $percent = $row[Q_percent];
-            $QuotationList[] = new Quotation($ID,$date,$empid,$cusid,$payment,$percent);
+            $QuotationList[] = new Quotation($ID,$date,$empID,$cusID,$payment,$percent);
         }
         require("connection_close.php");
 
