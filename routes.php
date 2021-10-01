@@ -1,5 +1,6 @@
 <?php
-$controllers = array('pages'=>['home', 'error'],'Quotation'=>['index_Quotation'],'QuotationDetails'=>['index_QuotationDetails']); //list controller
+$controllers = array('pages'=>['home', 'error'],'Quotation'=>['index_Quotation']
+                ,'QuotationDetails'=>['index_QuotationDetails','updateFrom']); //list controller
 
 
 function call($controller, $action){
