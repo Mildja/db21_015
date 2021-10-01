@@ -5,6 +5,11 @@
             $QuotationDetails_list = QuotationDetails::getAll();
             require_once("./views/QuotationDetails/index_QuotationDetails.php");
         }
+        /*public function update()
+        {
+                $ID=$_GET['QD_ID'];
+                $QuotationDetails = QuotationDetails::get($ID);
 
+        }*/
 
 }?>
