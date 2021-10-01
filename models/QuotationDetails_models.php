@@ -36,13 +36,13 @@
         require("connection_connect.php");
         $sql = "SELECT * FROM Product_list";
         $result = $conn->query($sql);
-        while($my_row = $result->fetch_assoc()){
-            $ID = $my_row["PL_ID"];
-            $Q_ID = $my_row["Q_ID"];
-            $P_ID = $my_row["P_ID"];
-            $Color_ID = $my_row["Color_ID"];
-            $NumOfProduct = $my_row["NumOfProduct"];
-            $NumColorScreen = $my_row["NumColorScreen"];
+        while($row = $result->fetch_assoc()){
+            $ID = $row["PL_ID"];
+            $Q_ID = $row["Q_ID"];
+            $P_ID = $row["P_ID"];
+            $Color_ID = $row["Color_ID"];
+            $NumOfProduct = $ow["NumOfProduct"];
+            $NumColorScreen = $row["NumColorScreen"];
             $QuotationDetailslist[] = new QuotationDetails($ID,$Q_ID,$P_ID,$Color_ID,$NumOfProduct,$NumColorScreen);
         }
         require("connection_close.php");
