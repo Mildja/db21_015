@@ -19,7 +19,7 @@ class Quotation{
 
     public static function getAll()
     {
-        $QuatationList = [];
+        $QuotationList = [];
         require("connection_connect.php");
         $sql = "select * from Quotation";
         $result = conn->query($sql);
@@ -35,6 +35,6 @@ class Quotation{
         }
         require("connection_close.php")
 
-        return $QuatationList;
+        return $QuotationList;
     }
 }?>
