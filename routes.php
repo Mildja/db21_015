@@ -3,7 +3,7 @@ $controllers = array('pages'=>['home', 'error'],'Quotation'=>['index_Quotation']
 
 
 function call($controller, $action){
-    require_once("./controller/".$controller."_controller.php");
+    require_once("controllers/".$controller."_controller.php");
     switch($controller)
     {
         case "pages":  $controller = new PagesController();
