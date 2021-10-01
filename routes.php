@@ -1,5 +1,5 @@
 <?php
-$controllers = array('pages'=>['home', 'error']); //list controller
+$controllers = array('pages'=>['home', 'error'],'QuotationDetails'=>['index']); //list controller
 
 function call($controller, $action){
     require_once("controller/".$controller."_controller.php");
@@ -7,6 +7,9 @@ function call($controller, $action){
     {
         case "pages":  $controller = new PagesController();
                       break;
+        case "QuotationDetails": require_once("models/QuotationDetails_models.php");
+                                $controller = new QuotationDetails_controller();
+                                break;
 
 
 
