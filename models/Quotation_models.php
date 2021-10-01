@@ -41,6 +41,69 @@ class Quotation{
     public static function get($ID)
     {
         require("connection_connect.php");
-        $sql = ""
+        $sql = "" //เชื่อมฐานข้อมูล cus+emp+quota 35
+        $result = $conn->query($sql);
+        $row = $result->fetch_assoc();
+        $ID = $row[Q_ID];
+        $date = $row[Q_date];
+        $empID = $row[Emp_ID];
+        $cusID = $row[Cus_ID];
+        $payment = $row[Q_payment];
+        $percent = $row[Q_percent];
+        require("connection_close.php");
+
+        return new Quotation($ID,$date,$empID,$cusID,$payment,$percent);
     }
+
+    public static function search($key)
+    {
+        $QuotationList = [];
+        require("connection_connect.php");
+        $sql = "" //เงื่อนไขต่างๆนาๆ 37
+        $result = $conn->query($sql);
+        while($row = $result->fetch_assoc())
+        {
+            $ID = $row[Q_ID];
+            $date = $row[Q_date];
+            $empID = $row[Emp_ID];
+            $cusID = $row[Cus_ID];
+            $payment = $row[Q_payment];
+            $percent = $row[Q_percent];
+            $QuotationList[] = new Quotation($ID,$date,$empID,$cusID,$payment,$percent);
+        }
+        require("connection_close.php");
+
+        return $QuotationList;
+    }
+
+    public static function add($ID,$date,$empID,$cusID,$payment)
+    {
+        require("connection_connect.php");
+        $sql = "INSERT into Quotation(Q_ID,Q_date,Emp_ID,Cus_ID,Q_payment) values ('$ID','$date','$empID','$cusID','$payment')";
+        $result = $conn->query($sql);
+        require("connection_close.php");
+
+        return "add success $result rows";
+    }
+
+    public static function update($ID,$date,$empID,$cusID,$payment)
+    {
+        require("connection_connect.php");
+        $sql = "UPDATE into Quotation SET Q_date='$date',Emp_ID='$empID',Cus_ID='$cusID',Q_payment='$payment' WHERE Q_ID='$ID'";
+        $result = $conn->query($sql);
+        require("connection_close.php");
+
+        return "update success $result row";
+    }
+
+    public static function delete($ID)
+    {
+        require_once("connection_connect.php");
+        $sql = "DELETE from Quotation WHERE Q_ID='$ID'";
+        $result = $conn->query($sql);
+        require("connection_close.php");
+
+        return "delete success $result row";
+    }
+
 }?>
