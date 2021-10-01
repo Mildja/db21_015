@@ -15,8 +15,8 @@ foreach($Quotation_List as $Quotation)
     echo "<tr>
         <td>$Quotation->ID</td>
         <td>$Quotation->date</td>
-        <td>$Quotation->empid</td>
-        <td>$Quotation->cusid</td>
+        <td>$Quotation->empID</td>
+        <td>$Quotation->cusID</td>
         <td>$Quotation->payment</td>
         <td>$Quotation->percent</td>
 
