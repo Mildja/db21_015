@@ -21,5 +21,7 @@ if(isset($_GET['controller'])&&isset($_GET['action']))
         <?php require_once("./routes.php");?>
       
         <p>Welcome to our homepage เว็บเวร</p>
+
+        <p>ปลาบู่ทองทอดน้ำปลา</p>
     </body>
 </html>
