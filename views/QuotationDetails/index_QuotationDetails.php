@@ -1,6 +1,6 @@
 <div Align ="Center">
-<table border = 1>
-        new order <a href=?controller=QuotationDetails&action=NewQuotationDetails> click</a><br>
+        <table border = 1>
+        สร้างรายละเอียดใบสั่งซื้อ <a href=?controller=QuotationDetails&action=NewQuotationDetails> click</a><br>
         <tr>
                 <td>ID</td>
                 <td>Q_ID</td>
