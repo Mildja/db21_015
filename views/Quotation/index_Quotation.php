@@ -28,7 +28,9 @@ tr:hover{background-color:#f5f5f5}
         <td>Cus_ID</td>
         <td>Q_payment</td>
         <td>Q_percent</td>
-    </tr>
+        <td>Update</td>
+        <td>Delete</td>
+</tr>
 
 
 <?php 
