@@ -7,9 +7,10 @@
         public  $NumOfProduct ;
         public  $NumColorScreen ;
 
-        public function __constuct($ID,$Q_ID,$Color_ID,$NumOfProduct,$NumColorScreen){
-            $this->ID=$ID;
+        public function __constuct($ID,$Q_ID,$P_ID,$Color_ID,$NumOfProduct,$NumColorScreen){
+            $this->PL_ID=$ID;
             $this->Q_ID=$Q_ID;
+            $this->P_ID=$P_ID;
             $this->Color_ID=$Color_ID;
             $this->NumOfProduct=$NumOfProduct;
             $this->NumColorScreen=$NumColorScreen;
@@ -21,11 +22,12 @@
         $my_row=$result->fetch_assoc();
         $ID = $my_row["PL_ID"];
         $Q_ID = $my_row["Q_ID"];
+        $P_ID = $my_row["P_ID"];
         $Color_ID = $my_row["Color_ID"];
         $NumOfProduct = $my_row["NumOfProduct"];
         $NumColorScreen = $my_row["NumColorScreen"];
         require("connection_close.php");
-        return new QuotationDetails($ID,$Q_ID,$Color_ID,$NumOfProduct,$NumColorScreen);
+        return new QuotationDetails($ID,$Q_ID,$P_ID,$Color_ID,$NumOfProduct,$NumColorScreen);
     }
 
     public static function getAll(){
@@ -36,27 +38,28 @@
         while($my_row = $result->fetch_assoc()){
             $ID = $my_row["PL_ID"];
             $Q_ID = $my_row["Q_ID"];
+            $P_ID = $my_row["P_ID"];
             $Color_ID = $my_row["Color_ID"];
             $NumOfProduct = $my_row["NumOfProduct"];
             $NumColorScreen = $my_row["NumColorScreen"];
-            $Orderdetail_list[] = new QuotationDetails($ID,$Q_ID,$Color_ID,$NumOfProduct,$NumColorScreen);
+            $Orderdetail_list[] = new QuotationDetails($ID,$Q_ID,$P_ID,$Color_ID,$NumOfProduct,$NumColorScreen);
         }
         require("connection_close.php");
         return $QuotationDetailslist;
     }
 
-    public static function add($ID,$Q_ID,$Color_ID,$NumOfProduct,$NumColorScreen){
+    public static function add($ID,$Q_ID,$P_ID,$Color_ID,$NumOfProduct,$NumColorScreen){
         require("connection_connect.php");
-        $sql ="INSERT INTO Product_list (PL_ID,Q_ID,Color_ID,NumOfProduct,NumColorScreen)
-        VALUES('$ID','$Q_ID','$Color_ID','$NumOfProduct','$NumColorScreen')";
+        $sql ="INSERT INTO Product_list (PL_ID,Q_ID,P_ID,Color_ID,NumOfProduct,NumColorScreen)
+        VALUES('$ID','$Q_ID','$P_ID','$Color_ID','$NumOfProduct','$NumColorScreen')";
         $result=$conn->query($sql);
         require("connection_close.php");
         return "Add success $result rows";
 
     }
-    public static function update($ID,$Q_ID,$Color_ID,$NumOfProduct,$NumColorScreen){
+    public static function update($ID,$Q_ID,$P_ID,$Color_ID,$NumOfProduct,$NumColorScreen){
         require("connection_connect.php");
-        $sql="UPDATE Product_list SET PL_ID='$ID',Q_ID=$Q_ID,Color_ID='$Color_ID',NumOfProduct='$NumOfProduct',NumColorScreen='$NumColorScreen')";
+        $sql="UPDATE Product_list SET PL_ID='$ID',Q_ID=$Q_ID,P_ID='$P_ID',Color_ID='$Color_ID',NumOfProduct='$NumOfProduct',NumColorScreen='$NumColorScreen')";
         require("connection_close.php");
         return "Update success $result rows";
     }
