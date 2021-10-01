@@ -17,7 +17,8 @@ if(isset($_GET['controller'])&&isset($GET['action']))
         [<a href="?controller=Quotation&action=index_Quotation">Quotation</a>]
         [<a href="?controller=QuotationDetails&action=index_QuotationDetails">QuotationDetails</a>]
         <br>
-        <?php require_once("routes.php") ?>
         <p>Welcome to our homepage เว็บเวร</p>
+        <?php require_once("./routes.php") ?>
+        
     </body>
 </html>
