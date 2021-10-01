@@ -33,7 +33,7 @@ class Quotation{
             $percent = $row[Q_percent];
             $QuotationList[] = new Quotation($ID,$date,$empid,$cusid,$payment,$percent);
         }
-        require("connection_close.php")
+        require("connection_close.php");
 
         return $QuotationList;
     }
