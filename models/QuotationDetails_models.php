@@ -37,7 +37,6 @@
         $sql = "SELECT * FROM Product_list";
         $result = $conn->query($sql);
         while($my_row = $result->fetch_assoc()){
-            echo"ลาก่อน";
             $ID = $my_row["PL_ID"];
             $Q_ID = $my_row["Q_ID"];
             $P_ID = $my_row["P_ID"];
