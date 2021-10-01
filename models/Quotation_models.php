@@ -37,4 +37,10 @@ class Quotation{
 
         return $QuotationList;
     }
+
+    public static function get($ID)
+    {
+        require("connection_connect.php");
+        $sql = ""
+    }
 }?>
