@@ -8,7 +8,7 @@
         public  $NumColorScreen ;
 
         public function __constuct($ID,$Q_ID,$P_ID,$Color_ID,$NumOfProduct,$NumColorScreen){
-            $this->PL_ID=$ID;
+            $this->ID=$ID;
             $this->Q_ID=$Q_ID;
             $this->P_ID=$P_ID;
             $this->Color_ID=$Color_ID;
@@ -42,7 +42,7 @@
             $Color_ID = $my_row["Color_ID"];
             $NumOfProduct = $my_row["NumOfProduct"];
             $NumColorScreen = $my_row["NumColorScreen"];
-            $Orderdetail_list[] = new QuotationDetails($ID,$Q_ID,$P_ID,$Color_ID,$NumOfProduct,$NumColorScreen);
+            $QuotationDetailslist [] = new QuotationDetails($ID,$Q_ID,$P_ID,$Color_ID,$NumOfProduct,$NumColorScreen);
         }
         require("connection_close.php");
         return $QuotationDetailslist;
