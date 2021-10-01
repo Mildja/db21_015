@@ -2,8 +2,8 @@
 class Quotation{
     public $ID;
     public $date;
-    public $empID,$Emp_name;
-    public $cusID,$Cus_name;
+    public $empID;
+    public $cusID;
     public $payment;
     public $percent;
 
@@ -15,8 +15,6 @@ class Quotation{
         $this->cusID = $cusID;
         $this->payment = $payment;
         $this->percent = $percent;
-        $this->Emp_name = $Emp_name;
-        $this->Cus_name = $Cus_name;
     }
 
     public static function getAll()
@@ -43,7 +41,7 @@ class Quotation{
     public static function get($ID)
     {
         require("connection_connect.php");
-        $sql = "SELECT * from Quotation JOIN Customer USING(Cus_ID) JOIN Employee USING(Emp_ID);
+        $sql = "SELECT * from Quotation Natural JOIN Customer Natural JOIN Employee where Emp_ID='$empID' and Cus_ID='$cusID'";
         $result = $conn->query($sql);
         $row = $result->fetch_assoc();
         $ID = $row[Q_ID];
