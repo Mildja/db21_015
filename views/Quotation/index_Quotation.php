@@ -1,7 +1,27 @@
 
 <div Align ="Center">
-<table border = 1>
-    <tr>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover{background-color:#f5f5f5}
+</style>
+</head>
+<body>
+<br>
+<table style="width:80%">
+<tr bgcolor = "skyblue">
         <td>ID</td>
         <td>Date</td>
         <td>Emp_ID</td>
