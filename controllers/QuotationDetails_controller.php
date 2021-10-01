@@ -3,7 +3,7 @@
         public function index_QuotationDetails()
         {
             $QuotationDetails_list = QuotationDetails::getAll();
-            require_once("views/QuotationDetails/index_QuotationDetails.php");
+            require_once("./views/QuotationDetails/index_QuotationDetails.php");
         }
 
 
