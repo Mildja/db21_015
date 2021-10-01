@@ -43,8 +43,8 @@ foreach($Quotation_List as $Quotation)
         <td>$Quotation->cusID</td>
         <td>$Quotation->payment</td>
         <td>$Quotation->percent</td>
-        <td><a href=?controller=index_Quotation&action=update_Quotation>Update</a></td>
-        <td><a href=?controller=index_Quotation&action=delete_Quotation>Delete</a></td>
+        <td><a href=?controller=index_Quotation&action=update_Quotation&Q_ID=$Quotation->ID>Update</a></td>
+        <td><a href=?controller=index_Quotation&action=delete_Quotation&Q_ID=$Quotation->ID>Delete</a></td>
 
     </tr>";
 }
