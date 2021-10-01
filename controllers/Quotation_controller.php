@@ -9,6 +9,7 @@ class QuotationController
 
     public function newQuotation()
     {
+        $Quotation_List = Quotation::getAll();
         $Customer_List = Customer::getAll();
         $Employee_List = Employee::getAll();
         require_once("./views/Quotation/newQuotation.php");
