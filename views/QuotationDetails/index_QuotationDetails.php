@@ -1,3 +1,4 @@
+<div Align ="Center">
 <table border = 1>
 
         <tr>
@@ -27,3 +28,4 @@
 }
 echo "</table>";
 ?>
+</div>
