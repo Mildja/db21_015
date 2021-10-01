@@ -26,7 +26,7 @@ tr:hover{background-color:#f5f5f5}
         <button type="submit" name="action" value="search">Search</button>
     </form>
 
-    Add Quotation <a href=?controller=index_Quotation&action=newQaotation>Click</a>
+    Add Quotation <a href="?controller=index_Quotation&action=newQuotation">Click</a>
 
 
 <br>
