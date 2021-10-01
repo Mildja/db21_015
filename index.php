@@ -13,7 +13,7 @@ if(isset($_GET['controller'])&&isset($_GET['action']))
     <body>
         <h1 style="font-family:verdana;">Premium Shop</h1>
        
-        <?php echo "controller= ".$controller.",action=".$action;?>
+    
         <br>[<a href="http://158.108.207.4/db21">หนีไป</a>]
         [<a href="http://158.108.207.4/db21/db21_015/?controller=pages&action=home">Home</a>]
         [<a href="?controller=Quotation&action=index_Quotation">Quotation</a>]
