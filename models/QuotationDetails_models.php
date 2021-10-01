@@ -1,11 +1,11 @@
 <?php
     class QuotationDetails{
-        public  $ID;
-        public  $Q_ID;
-        public  $P_ID;
-        public  $Color_ID;
-        public  $NumOfProduct;
-        public  $NumColorScreen;
+        public $ID;
+        public $Q_ID;
+        public $P_ID;
+        public $Color_ID;
+        public $NumOfProduct;
+        public $NumColorScreen;
 
     public function __constuct($ID,$Q_ID,$P_ID,$Color_ID,$NumOfProduct,$NumColorScreen){
             $this->ID=$ID;
