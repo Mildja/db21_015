@@ -38,7 +38,7 @@
         $result = $conn->query($sql);
         while($my_row = $result->fetch_assoc()){
             echo"ลาก่อน";
-            $ID = 0;
+            $ID = $my_row["PL_ID"];
             $Q_ID = $my_row["Q_ID"];
             $P_ID = $my_row["P_ID"];
             $Color_ID = $my_row["Color_ID"];
