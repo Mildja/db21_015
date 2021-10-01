@@ -52,7 +52,6 @@ class Quotation{
         $percent = $row[Q_percent];
         require("connection_close.php");
 
-        //สร้างคลาสแล้วใส่ค่าลงไป
         return new Quotation($ID,$date,$empID,$cusID,$payment,$percent);
     }
 
