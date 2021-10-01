@@ -19,6 +19,14 @@ tr:hover{background-color:#f5f5f5}
 </style>
 </head>
 <body>
+    <form method="get" action="">
+        <input type="text" name="key">
+        <input type="hidden" name="controller" value="Quotation"/>
+        <button type="submit" name="action" value="search">Search</button>
+    </form>
+</body>
+    
+
 <br>
 <table style="width:80%">
 <tr bgcolor = "lightblue">
