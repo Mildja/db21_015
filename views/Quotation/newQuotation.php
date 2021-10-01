@@ -4,12 +4,12 @@
     <label>Emp_ID<input type="text" name="Emp_ID"/></label>
     <?php foreach($Employee_List as $Emp)
     {
-        echo "<option value=$Emp->empID>$Eus->Emp_name</option>";
+        echo "<option value=$Emp->Emp_ID>$Emp->Emp_ID</option>";
     }?>
     <label>Cus_ID<input type="text" name="Cus_ID"/></label>
     <?php foreach($Customer_List as $Cus)
     {
-        echo "<option value=$Cus->cusID>$Cus->Cus_name</option>";
+        echo "<option value=$Cus->Cus_ID>$Cus->Cus_ID</option>";
     }?>
     <label>Payment<input type="text" name="Q_payment"/></label>
 
