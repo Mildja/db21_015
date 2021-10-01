@@ -107,5 +107,4 @@ class Quotation{
         return "delete success $result row";
     }
 
-
 }?>
