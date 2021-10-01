@@ -12,7 +12,7 @@
 <?php foreach($QuotationDetails_list as $QuotationDetails)
 {
 
-        echo"สัส";
+     
 
         echo "<tr>
                 <td>$QuotationDetails->ID</td>
