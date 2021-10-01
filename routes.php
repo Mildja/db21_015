@@ -7,6 +7,13 @@ function call($controller, $action){
     {
         case "pages":  $controller = new PagesController();
                       break;
+
+
+
+
+
+
+                      
     }
 
     $controller->{$action}();
