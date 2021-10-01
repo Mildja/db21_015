@@ -6,4 +6,11 @@ class QuotationController
         $Quotation_List = Quotation::getAll();
         require_once("./views/Quotation/index_Quotation.php");
     }
+
+    public function newQuotation()
+    {
+        $Customer_List = Customer::getAll();
+        $Employee_List = Employee::getAll();
+        require_once("./views/Quotation/newQuotation.php");
+    }
 }?>
