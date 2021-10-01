@@ -8,8 +8,9 @@ function call($controller, $action){
     {
         case "pages":  $controller = new PagesController();
                       break;
-        case "Quotation": $controller = new QuotationController();
-                        break;
+        case "Quotation":   require_once("models/Quotation_models.php");
+                            $controller = new QuotationController();
+                            break;
 
                       
     }
