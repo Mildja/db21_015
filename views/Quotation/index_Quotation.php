@@ -1,6 +1,7 @@
 
 <div Align ="Center">
 <!DOCTYPE html>
+
 <html>
 <head>
 <style>
@@ -24,12 +25,13 @@ tr:hover{background-color:#f5f5f5}
         <input type="hidden" name="controller" value="Quotation"/>
         <button type="submit" name="action" value="search">Search</button>
     </form>
-</body>
-    
+
+    Add Quotation <a href=?controller=index_Quotation&action=newQaotation>Click</a>
+
 
 <br>
 <table style="width:80%">
-<tr bgcolor = "lightblue">
+    <tr bgcolor = "lightblue">
         <td>ID</td>
         <td>Date</td>
         <td>Emp_ID</td>
@@ -38,8 +40,7 @@ tr:hover{background-color:#f5f5f5}
         <td>Q_percent</td>
         <td>Update</td>
         <td>Delete</td>
-</tr>
-
+    </tr>
 
 <?php 
 foreach($Quotation_List as $Quotation)
@@ -58,5 +59,7 @@ foreach($Quotation_List as $Quotation)
 }
 echo "</table>";
 ?>
+</body>
+</html>
 </div>
 
