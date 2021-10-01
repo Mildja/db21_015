@@ -31,7 +31,7 @@
     }
 
     public static function getAll(){
-        echo"สัส";
+       
         $QuotationDetailslist = [];
         require("connection_connect.php");
         $sql = "SELECT * FROM Product_list";
