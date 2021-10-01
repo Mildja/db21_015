@@ -1,6 +1,6 @@
 <?php
 $controllers = array('pages'=>['home', 'error'],'Quotation'=>['index_Quotation']
-                ,'QuotationDetails'=>['index_QuotationDetails','updateFrom']); //list controller
+                ,'QuotationDetails'=>['index_QuotationDetails','NewQuotationDetails','updateFrom']); //list controller
 
 
 function call($controller, $action){
@@ -12,7 +12,9 @@ function call($controller, $action){
         case "Quotation":   require_once("./models/Quotation_models.php");
                                 $controller = new QuotationController();
                                 break;
-        case "QuotationDetails": require_once("./models/QuotationDetails_models.php");
+        case "QuotationDetails":require_once("./models/QuotationDetails_models.php");
+                                require_once("./models/Product_models.php");
+                                require_once("./models/Color_models.php");
                                 $controller = new QuotationDetails_controller();
                                 break;
         
