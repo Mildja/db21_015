@@ -1,6 +1,6 @@
 <?php
 $controllers = array('pages'=>['Home', 'error'],'Quotation'=>['index_Quotation','newQuotation','addQuotation']
-                ,'QuotationDetails'=>['index_QuotationDetails','NewQuotationDetails','updateFrom']); //list controller
+                ,'QuotationDetails'=>['index_QuotationDetails','NewQuotationDetails','addQuotationDetails','updateFrom']); //list controller
 
 
 function call($controller, $action){

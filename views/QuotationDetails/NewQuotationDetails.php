@@ -7,7 +7,7 @@
 </select> </label><br>
 
 <label>สินค้า <select name="P_ID">
-    <?php foreach($Color_List as $c) {echo "<option value = $c->P_ID> $c->P_name  $c->Color_name";}?>
+    <?php foreach($Color_List as $c) {echo "<option value = $c->P_ID>$c->P_name $c->Color_name";}?>
 </select></label><br>
 
 
@@ -20,6 +20,6 @@
 
 <input type="hidden" name="controller" value = "QuotationDetails"/>
 <button type="submit"name="action" value = "index_QuotationDetails"> Back </button>
-<button type="submit"name="action" value= "add"> Save </button>
+<button type="submit"name="action" value= "addQuotationDetails"> Save </button>
 </form>
 </div>
