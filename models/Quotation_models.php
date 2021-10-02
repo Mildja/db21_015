@@ -21,7 +21,7 @@ class Quotation{
     {
         $QuotationList = [];
         require("connection_connect.php");
-        $sql = "SELECT * from Quotation";
+        $sql = "SELECT * from Quotation Natural JOIN customer Natural JOIN Employee ";
         $result = $conn->query($sql);
         while($row = $result->fetch_assoc())
         {
@@ -51,7 +51,6 @@ class Quotation{
         $payment = $row[Q_payment];
         $percent = $row[Q_percent];
         require("connection_close.php");
-
         return new Quotation($ID,$date,$empID,$cusID,$payment,$percent);
     }
 
@@ -85,7 +84,6 @@ class Quotation{
         $sql = "INSERT into Quotation(Q_ID,Q_date,Emp_ID,Cus_ID,Q_payment,Q_percent) values ('$ID','$date','$empID','$cusID','$payment','$percent')";
         $result = $conn->query($sql);
         require("connection_close.php");
-
         return ;
     }
 
