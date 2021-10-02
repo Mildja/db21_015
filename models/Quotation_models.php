@@ -83,7 +83,7 @@ class Quotation{
         $result = $conn->query($sql);
         require("connection_close.php");
 
-        return 5555 ;
+        return ;
     }
 
     public static function update($ID,$date,$empID,$cusID,$payment)
