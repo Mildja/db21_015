@@ -51,7 +51,7 @@
 
     public static function add($ID,$Q_ID,$P_ID,$Color_ID,$NumOfProduct,$NumColorScreen){
         require("connection_connect.php");
-        $sql ="INSERT INTO Product_list ('PL_ID','Q_ID','P_ID','Color_ID','NumOfProduct','NumColorScreen')
+        $sql ="INSERT INTO Product_list (PL_ID,Q_ID,P_ID,Color_ID,NumOfProduct,NumColorScreen)
         VALUES('$ID','$Q_ID','$P_ID','$Color_ID','$NumOfProduct','$NumColorScreen')";
         $result=$conn->query($sql);
         require("connection_close.php");
