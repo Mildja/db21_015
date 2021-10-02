@@ -3,12 +3,14 @@
 <label> รหัสรายละเอียด <input type="text" name="ID"/> </label><br>
 
 <label> รหัสออเดอร์ <select name="ID">
-    <?php foreach($order_List as $order){echo "<option value = $order->ID> $order->ID</option>";}?>
+    <?php foreach($Quotation_List as $Q){echo "<option value = $Q->ID> $Q->ID</option>";}?>
 </select> </label><br>
 
-<label>สินค้า <select name="ID">
-    <?php foreach($Color_List as $c) {echo "<option value = $c->P_ID>$c->P_name  $c->Color_ID>$c->Color_name</option>";}?>
+<label>สินค้า <select name="P_ID">
+    <?php foreach($Color_List as $c) {echo "<option value = $c->P_ID>$c->P_name  $c->Color_name>$c->Color_ID";}?>
 </select></label><br>
+
+
 
 <label> จำนวนสีสกรีน <input type="number" name="NumColorScreen"/> </label><br>
 <label> จำนวนที่สั่ง <input type="number" name="NumOfProduct"/> </label><br>
