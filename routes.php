@@ -1,5 +1,5 @@
 <?php
-$controllers = array('pages'=>['Home', 'error'],'Quotation'=>['index_Quotation','newQuotation']
+$controllers = array('pages'=>['Home', 'error'],'Quotation'=>['index_Quotation','newQuotation','addQuotation']
                 ,'QuotationDetails'=>['index_QuotationDetails','NewQuotationDetails','updateFrom']); //list controller
 
 
