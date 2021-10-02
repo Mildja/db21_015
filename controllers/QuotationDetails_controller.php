@@ -14,7 +14,8 @@
         }
         public function addQuotationDetails()
         {
-            $ID = $_GET['PL_ID'];
+            echo"vvs";
+            $ID = $_GET['ID'];
             $Q_ID = $_GET['Q_ID'];
             $P_ID= $_GET['P_ID'];
             $Color_ID = $_GET['Color_ID'];
