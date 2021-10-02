@@ -41,13 +41,13 @@ class Quotation{
     public static function get($ID)
     {
         require("connection_connect.php");
-        $sql = "SELECT * from Quotation where Q_ID='$ID' ";
+        $sql = "SELECT * from Quotation JOIN customer USING(Cus_ID) JOIN Employee USING(Emp_ID)";
         $result = $conn->query($sql);
         $row = $result->fetch_assoc();
         $ID = $row[Q_ID];
         $date = $row[Q_date];
-        $empID = $row[Emp_ID];
-        $cusID = $row[Cus_ID];
+        $empID = $row[Employee.Emp_ID];
+        $cusID = $row[customer.Cus_ID];
         $payment = $row[Q_payment];
         $percent = $row[Q_percent];
         require("connection_close.php");
