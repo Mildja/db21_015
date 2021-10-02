@@ -23,6 +23,18 @@
             QuotationDetails::add($ID,$Q_ID,$P_ID,$Color_ID,$NumOfProduct,$NumColorScreen);
             QuotationDetails_controller::index_QuotationDetails();
         }
+        public function Delete_QuotationDeails()
+        {  
+        $ID=$_GET['ID'];
+        $QuotationDetails=QuotationDetails::get($ID);
+        require_once('./views/QuotationDetails/Delete_QuotationDetails.php');
+        }
+        public function Delete()
+        {
+            $ID = $_GET['ID'];
+            QuotationDetails::delete($ID);
+            QuotationDetails_controller::index_QuotationDetails();
+        }
         /*public function update()
         {
                 $ID=$_GET['QD_ID'];
