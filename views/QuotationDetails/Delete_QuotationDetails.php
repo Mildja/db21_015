@@ -1,6 +1,6 @@
 <?php echo "<br>คุณต้องการที่จะลบรายละเอียดใบสั่งซื้อหรือไม่<br>
         <br>$QuotationDetails->ID
-        $QuotationDetails->P_ID $QuotationDetails->Color_ID br>";?>
+        $QuotationDetails->P_ID $QuotationDetails->Color_ID <br>";?>
 
 <form method="get" action="">
     <input type="hidden" name="controller" value="QuotationDetails"/>
