@@ -23,7 +23,7 @@
             QuotationDetails::add($ID,$Q_ID,$P_ID,$Color_ID,$NumOfProduct,$NumColorScreen);
             QuotationDetails_controller::index_QuotationDetails();
         }
-        public function Delete_QuotationDeails()
+        public function Delete_QuotationDetails()
         {  
         $ID=$_GET['ID'];
         $QuotationDetails=QuotationDetails::get($ID);
