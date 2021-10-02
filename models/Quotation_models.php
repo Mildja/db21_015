@@ -51,7 +51,6 @@ class Quotation{
         $payment = $row[Q_payment];
         $percent = $row[Q_percent];
         require("connection_close.php");
-
         return new Quotation($ID,$date,$empID,$cusID,$payment,$percent);
     }
 
@@ -91,7 +90,7 @@ class Quotation{
     public static function update($ID,$date,$empID,$cusID,$payment)
     {
         require("connection_connect.php");
-      $sql = "UPDATE into Quotation SET Q_date='$date',Emp_ID='$empID',Cus_ID='$cusID',Q_payment='$payment',Q_percent='$percent' WHERE Q_ID='$ID'";
+        $sql = "UPDATE into Quotation SET Q_date='$date',Emp_ID='$empID',Cus_ID='$cusID',Q_payment='$payment',Q_percent='$percent' WHERE Q_ID='$ID'";
         $result = $conn->query($sql);
         require("connection_close.php");
 
