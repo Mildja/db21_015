@@ -1,21 +1,27 @@
-<form method = "get" action = "">
-    <label>ID<input type="text" name="Q_ID"/></label><br>
-    <label>Date<input type="date" name="Q_date" value="<?php echo date("Y-m-d");?>"/></label>
-    <label>Emp_ID<select name="Emp_ID">
-    <?php foreach($Employee_List as $Emp)
-    {
-        echo "<option value=$Emp->Emp_ID>$Emp->Emp_ID</option>";
-    }?>
-    </label></label><br>
-    <label>Cus_ID<select name="Cus_ID">
-    <?php foreach($Customer_List as $Cus)
-    {
-        echo "<option value=$Cus->Cus_ID>$Cus->Cus_ID</option>";
-    }?>
-    </label></label><br>
-    <label>Payment<input type="text" name="Q_payment"/></label>
+<div Align ="Center">
 
-    <input type="hidden" name="controller" value="Quotation"/>
-    <button type="submit" name="action" value="index_Quotation">Back</button>
-    <button type="submit" name="action" value="addQuotation">Save</button>
+
+
+
+<form method="get" action="">
+<label> รหัสรายละเอียด <input type="text" name="ID"/> </label><br>
+
+<label> รหัสออเดอร์ <select name="ID">
+    <?php foreach($order_List as $order){echo "<option value = $order->ID> $order->ID</option>";}?>
+</select> </label><br>
+
+<label>สินค้า <select name="ID">
+    <?php foreach($Color_List as $c) {echo "<option value = $c->P_ID>$c->P_name  $c->Color_ID>$c->Color_name</option>";}?>
+</select></label><br>
+
+<label> จำนวนสีสกรีน <input type="number" name="NumColorScreen"/> </label><br>
+<label> จำนวนที่สั่ง <input type="number" name="NumOfProduct"/> </label><br>
+
+
+
+
+<input type="hidden" name="controller" value = "QuotationDetails"/>
+<button type="submit"name="action" value = "index"> Back </button>
+<button type="submit"name="action" value= "add"> Save </button>
 </form>
+</div>
