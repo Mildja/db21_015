@@ -12,14 +12,14 @@
     <label>รหัสพนักงาน (Emp_ID)  <select name="empID">
     <?php foreach($Employee_List as $E)
     {
-        echo "<option value=$E->empID > $E->ID</option>";
+        echo "<option value=$E->ID > $E->name</option>";
     }?>
     </select></label><br>
 
     <label>รหัสลูกค้า (Cus_ID)  <select name="cusID">
     <?php foreach($Customer_List as $C)
     {
-        echo "<option value=$C->cusID > $C->ID</option>";
+        echo "<option value=$C->ID > $C->name</option>";
     }?>
     </select></label><br>
 
