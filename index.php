@@ -24,7 +24,7 @@ if(isset($_GET['controller'])&&isset($_GET['action']))
     <body>
         <div Align ="Center">
             <h1>Premium Shop</h1>
-            <br>[<a href="http://158.108.207.4/db21">หนีไป</a>]
+            [<a href="http://158.108.207.4/db21">หนีไป</a>]
             [<a href="?controller=pages&action=Home">Home</a>]
             [<a href="?controller=Quotation&action=index_Quotation">Quotation</a>]
             [<a href="?controller=QuotationDetails&action=index_QuotationDetails">QuotationDetails</a>]
