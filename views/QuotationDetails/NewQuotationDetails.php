@@ -19,7 +19,7 @@
 
 
 <input type="hidden" name="controller" value = "QuotationDetails"/>
-<button type="submit"name="action" value = "index_QuotatioDetails"> Back </button>
+<button type="submit"name="action" value = "index_QuotationDetails"> Back </button>
 <button type="submit"name="action" value= "add"> Save </button>
 </form>
 </div>
