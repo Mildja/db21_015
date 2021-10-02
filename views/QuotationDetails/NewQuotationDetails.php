@@ -1,13 +1,13 @@
 <div Align ="Center">
 <form method="get" action="">
-<label> รหัสรายละเอียด <input type="text" name="ID"/> </label><br>
+<label> รหัสรายละเอียด <input type="text" name="PL_ID"/> </label><br>
 
-<label> รหัสออเดอร์ <select name="ID">
+<label> รหัสออเดอร์ <select name="Q_ID">
     <?php foreach($Quotation_List as $Q){echo "<option value = $Q->ID> $Q->ID</option>";}?>
 </select> </label><br>
 
 <label>สินค้า <select name="P_ID">
-    <?php foreach($Color_List as $c) {echo "<option value = $c->P_ID>$c->P_name  $c->Color_name>$c->Color_ID";}?>
+    <?php foreach($Color_List as $c) {echo "<option value = $c->P_ID> $c->P_name  $c->Color_name";}?>
 </select></label><br>
 
 
@@ -19,7 +19,7 @@
 
 
 <input type="hidden" name="controller" value = "QuotationDetails"/>
-<button type="submit"name="action" value = "index"> Back </button>
+<button type="submit"name="action" value = "index_QuotatioDetails"> Back </button>
 <button type="submit"name="action" value= "add"> Save </button>
 </form>
 </div>
