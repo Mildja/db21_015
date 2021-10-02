@@ -59,7 +59,10 @@ class Quotation{
     {
         $QuotationList = [];
         require("connection_connect.php");
-        $sql = "SELECT * from Quotation Natural JOIN Customer Natural JOIN Employee where (Q_ID like'%$key%' or Emp_ID like'%$key%' or Cus_ID like'%$key%') and Quotation.Cus_ID=customer.Cus_ID and Employee.Emp_ID=Quotation.Emp_ID";
+        $sql = "SELECT * from Quotation Natural JOIN customer Natural JOIN Employee 
+        where (Q_ID like'%$key%' or Emp_ID like'%$key%' or Cus_ID like'%$key%') 
+        and Quotation.Cus_ID=customer.Cus_ID and Employee.Emp_ID=Quotation.Emp_ID";
+
         $result = $conn->query($sql);
         while($row = $result->fetch_assoc())
         {
