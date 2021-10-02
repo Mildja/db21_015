@@ -27,7 +27,7 @@ tr:hover{background-color:#f5f5f5}
     </form>
 
    
-    Add Quotation <a href="?controller=index_Quotation&action=newQuotation">Click</a>
+    Add Quotation <a href="?controller=Quotation&action=newQuotation">Click</a>
     
 
 <br>
