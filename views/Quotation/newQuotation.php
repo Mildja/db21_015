@@ -1,4 +1,7 @@
 <div Align ="Center">
+<br>
+<img src="https://campus.campus-star.com/app/uploads/2018/10/docss01.jpg" width="400" height="250">
+<br><br>
 
 <form method = "get" action = "">
 
