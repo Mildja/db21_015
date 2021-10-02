@@ -6,10 +6,10 @@
 <form method = "GET" action = "">
 
     <label>เลขใบสั่งซื้อ (ID)  <input type="text" name="ID"
-            value="?php echo $Quotation->ID; ?>"/></label><br>
+            value="<?php echo $Quotation->ID; ?>"/></label><br>
 
     <label>วันที่ทำการสั่งซื้อ (Date)  <input type="date" name="date" 
-            value="<?php echo $Quotation->date;?>"/></label><br>
+            value="<?php echo $Quotation->date;?>/></label><br>
     
     <label>รหัสพนักงาน (Emp_ID)  <select name="empID">
     <?php foreach($Employee_List as $E)
