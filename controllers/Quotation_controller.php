@@ -1,7 +1,6 @@
 <?php
 class QuotationController
 {
-    public $ID,$date,$empID,$cusID,$payment,$percent;
 
     public function index_Quotation()
     {
@@ -29,6 +28,12 @@ class QuotationController
             Quotation::add($ID,$date,$empID,$cusID,$payment,$percent);
 
             QuotationController::index_Quotation();
+    }
 
+    public function search()
+    {
+        $key=$_GET['key'];
+        $Quotation_List = Quotation::search($key);
+        require_once("./views/Quotation/index_Quotation.php");
     }
 }?>
