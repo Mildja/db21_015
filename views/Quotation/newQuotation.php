@@ -3,7 +3,7 @@
 <img src="https://campus.campus-star.com/app/uploads/2018/10/docss01.jpg" width="400" height="250">
 <br><br>
 
-<form method = "get" action = "">
+<form method = "GET" action = "">
 
     <label>เลขใบสั่งซื้อ (ID)  <input type="text" name="ID"/></label><br>
 
@@ -12,14 +12,14 @@
     <label>รหัสพนักงาน (Emp_ID)  <select name="empID">
     <?php foreach($Employee_List as $E)
     {
-        echo "<option value=$E->ID > $E->name</option>";
+        echo "<option value=$E->ID > $E->ID</option>";
     }?>
     </select></label><br>
 
     <label>รหัสลูกค้า (Cus_ID)  <select name="cusID">
     <?php foreach($Customer_List as $C)
     {
-        echo "<option value=$C->ID > $C->name</option>";
+        echo "<option value=$C->ID > $C->ID</option>";
     }?>
     </select></label><br>
 
