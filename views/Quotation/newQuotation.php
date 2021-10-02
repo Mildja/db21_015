@@ -9,14 +9,14 @@
 
     <label>วันที่ทำการสั่งซื้อ (Date)  <input type="date" name="date" value="<?php echo date("Y-m-d");?>"/></label><br>
     
-    <label>รหัสพนักงาน (Emp_ID)  <select name="ID">
+    <label>รหัสพนักงาน (Emp_ID)  <select name="empID">
     <?php foreach($Employee_List as $E)
     {
         echo "<option value=$E->empID > $E->ID</option>";
     }?>
     </select></label><br>
 
-    <label>รหัสลูกค้า (Cus_ID)  <select name="ID">
+    <label>รหัสลูกค้า (Cus_ID)  <select name="cusID">
     <?php foreach($Customer_List as $C)
     {
         echo "<option value=$C->cusID > $C->ID</option>";
