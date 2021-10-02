@@ -20,7 +20,7 @@ tr:hover{background-color:#f5f5f5}
 </style>
 </head>
 <body>
-    <form method="get" action="">
+    <form method="GET" action="">
         <input type="text" name="key">
         <input type="hidden" name="controller" value="Quotation"/>
         <button type="submit" name="action" value="search">Search</button>
