@@ -41,13 +41,13 @@ class Quotation{
     public static function get($ID)
     {
         require("connection_connect.php");
-        $sql = "SELECT * from Quotation JOIN customer USING(Cus_ID) JOIN Employee USING(Emp_ID)";
+        $sql = "SELECT * from Quotation Natural JOIN customer Natural JOIN Employee where Q_ID='$ID' and Quotation.Cus_ID=customer.Cus_ID and Employee.Emp_ID=Quotation.Emp_ID";
         $result = $conn->query($sql);
         $row = $result->fetch_assoc();
         $ID = $row[Q_ID];
         $date = $row[Q_date];
-        $empID = $row[Employee.Emp_ID];
-        $cusID = $row[customer.Cus_ID];
+        $empID = $row[Emp_ID];
+        $cusID = $row[Cus_ID];
         $payment = $row[Q_payment];
         $percent = $row[Q_percent];
         require("connection_close.php");
@@ -89,7 +89,7 @@ class Quotation{
     public static function update($ID,$date,$empID,$cusID,$payment)
     {
         require("connection_connect.php");
-        $sql = "UPDATE into Quotation SET Q_date='$date',Emp_ID='$empID',Cus_ID='$cusID',Q_payment='$payment' WHERE Q_ID='$ID'";
+        $sql = "UPDATE into Quotation SET Q_date='$date',Emp_ID='$empID',Cus_ID='$cusID',Q_payment='$payment',Q_percent='$percent' WHERE Q_ID='$ID'";
         $result = $conn->query($sql);
         require("connection_close.php");
 
