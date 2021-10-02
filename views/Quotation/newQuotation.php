@@ -25,7 +25,7 @@
 
     <label>รูปแบบการชำระเงิน (มัดจำ/เครดิต)  <input type="text" name="payment"/></label><br>
     
-    <label>เปอร์เซ็นต์มัดจำ (Percent)  <input type="number" name="percent"/></label><br>
+    <label>เปอร์เซ็นต์มัดจำ (Percent)  <input type="text" name="percent"/></label><br>
 
     <input type="hidden" name="controller" value="Quotation"/><br>
     <button type="submit" name="action" value="index_Quotation">Back</button>
