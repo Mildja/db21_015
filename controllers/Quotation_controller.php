@@ -39,8 +39,8 @@ class QuotationController
     {
         $ID=$_GET['Q_ID'];
         $Quotation = Quotation::get($ID);
-        $Customer_List = Quotation::getAll();
-        $Employee_List = Quotation::getAll();
+        $Customer_List = Customer::getAll();
+        $Employee_List = Employee::getAll();
         require_once('./views/Quotation/updateForm.php');
     }
 
