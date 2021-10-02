@@ -81,9 +81,10 @@ class Quotation{
     public static function add($ID,$date,$empID,$cusID,$payment,$percent)
     {
         require("connection_connect.php");
-        $sql = "INSERT into `Quotation`(`Q_ID`,`Q_date`,`Emp_ID`,`Cus_ID`,`Q_payment`,`Q_percent`) values ('$ID','$date','$empID','$cusID','$payment','$percent')";
+        $sql = "INSERT INTO `Quotation`(`Q_ID`,`Q_date`,`Emp_ID`,`Cus_ID`,`Q_payment`,`Q_percent`) VALUES ('$ID','$date','$empID','$cusID','$payment','$percent')";
         $result = $conn->query($sql);
         require("connection_close.php");
+       
         return ;
     }
 
