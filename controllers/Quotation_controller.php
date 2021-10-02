@@ -1,6 +1,8 @@
 <?php
 class QuotationController
 {
+    public $ID,$date,$empID,$cusID,$payment,$percent;
+
     public function index_Quotation()
     {
         $Quotation_List = Quotation::getAll();
