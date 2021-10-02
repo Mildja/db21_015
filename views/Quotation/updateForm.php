@@ -13,10 +13,10 @@
     
     <label>รหัสพนักงาน (Emp_ID)  <select name="empID">
     <?php foreach($Employee_List as $E)
-    {
+    {       
         echo "<option value=$E->empID";
-        if($E->ID=$Quotation->empID){echo "selected='selected'";}
-        echo ">$E->cusID</option>";
+        if($E->ID==$Quotation->ID){echo "selected='selected'";}
+        echo ">$E->empID</option>";
     }?>
     </select></label><br>
 
@@ -24,7 +24,7 @@
     <?php foreach($Customer_List as $C)
     {
         echo "<option value=$C->cusID";
-        if($C->ID=$Quotation->cusID){echo "selected='selected'";}
+        if($C->ID==$Quotation->ID){echo "selected='selected'";}
         echo ">$C->cusID</option>";
     }?>
     </select></label><br>
