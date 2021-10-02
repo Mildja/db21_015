@@ -25,6 +25,7 @@ class QuotationController
             $cusID = $_GET['cusID'];
             $payment = $_GET['payment'];
             $percent = $_GET['percent'];
+           
             Quotation::add($ID,$date,$empID,$cusID,$payment,$percent);
 
             QuotationController::index_Quotation();
