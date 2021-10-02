@@ -6,12 +6,12 @@
             require_once("./views/QuotationDetails/index_QuotationDetails.php");
         }
 
-        public function newQuotation()
+        public function NewQuotationDetails()
         {
             $Quotation_List = Quotation::getAll();
-            $Customer_List = Customer::getAll();
-            $Employee_List = Employee::getAll();
-            require_once("./views/Quotation/newQuotation.php");
+            //$Product_List = Product::getAll();
+            $Color_List = Color::getAll();
+            require_once("./views/QuotationDetails/NewQuotationDetails.php");
         }
         /*public function update()
         {
