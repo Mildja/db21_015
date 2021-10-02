@@ -15,7 +15,7 @@ class Customer{
     {
         $CustomerList = [];
         require("connection_connect.php");
-        $sql = "SELECT * from Customer";
+        $sql = "SELECT * from customer";
         $result = $conn->query($sql);
         while($row = $result->fetch_assoc())
         {
