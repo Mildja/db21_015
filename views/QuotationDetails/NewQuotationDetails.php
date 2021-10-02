@@ -1,8 +1,4 @@
 <div Align ="Center">
-
-
-
-
 <form method="get" action="">
 <label> รหัสรายละเอียด <input type="text" name="ID"/> </label><br>
 
