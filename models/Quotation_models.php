@@ -41,7 +41,7 @@ class Quotation{
     public static function get($ID)
     {
         require("connection_connect.php");
-        $sql = "SELECT * from Quotation Natural JOIN Customer Natural JOIN Employee where Emp_ID='$empID' and Cus_ID='$cusID'";
+        $sql = "SELECT * from Quotation where Q_ID='$ID' ";
         $result = $conn->query($sql);
         $row = $result->fetch_assoc();
         $ID = $row[Q_ID];
@@ -76,10 +76,10 @@ class Quotation{
         return $QuotationList;
     }
 
-    public static function add($ID,$date,$empID,$cusID,$payment)
+    public static function add($ID,$date,$empID,$cusID,$payment,$percent)
     {
         require("connection_connect.php");
-        $sql = "INSERT into Quotation(Q_ID,Q_date,Emp_ID,Cus_ID,Q_payment) values ('$ID','$date','$empID','$cusID','$payment')";
+        $sql = "INSERT into Quotation(Q_ID,Q_date,Emp_ID,Cus_ID,Q_payment,Q_percent) values ('$ID','$date','$empID','$cusID','$payment')";
         $result = $conn->query($sql);
         require("connection_close.php");
 
