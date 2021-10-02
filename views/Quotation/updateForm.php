@@ -14,18 +14,18 @@
     <label>รหัสพนักงาน (Emp_ID)  <select name="empID">
     <?php foreach($Employee_List as $E)
     {       
-        echo "<option value=$E->empID";
+        echo "<option value=$E->ID";
         if($E->ID==$Quotation->ID){echo "selected='selected'";}
-        echo ">$E->empID</option>";
+        echo ">$E->ID</option>";
     }?>
     </select></label><br>
 
     <label>รหัสลูกค้า (Cus_ID)  <select name="cusID">
     <?php foreach($Customer_List as $C)
     {
-        echo "<option value=$C->cusID";
+        echo "<option value=$C->ID";
         if($C->ID==$Quotation->ID){echo "selected='selected'";}
-        echo ">$C->cusID</option>";
+        echo ">$C->ID</option>";
     }?>
     </select></label><br>
 
