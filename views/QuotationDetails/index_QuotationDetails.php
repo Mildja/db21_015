@@ -46,7 +46,7 @@ tr:hover{background-color:#f5f5f5}
                 <td>$QuotationDetails->NumOfProduct</td>
                 <td>$QuotationDetails->NumColorScreen</td>
                 <td><a href=?controller=QuotationDetails&action=updateFrom&PL_ID=$QuotationDetails->ID>Update</a></td>
-                <td><a href=?controller=QuotationDetails&action=Delete_QuotationDeails&ID=$QuotationDetails->ID>Delete</a></td>
+                <td><a href=?controller=QuotationDetails&action=Delete_QuotationDetails&ID=$QuotationDetails->ID>Delete</a></td>
                 </tr>";
         
 }
