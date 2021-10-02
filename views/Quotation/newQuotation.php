@@ -2,29 +2,29 @@
 
 <form method = "get" action = "">
 
-    <label>เลขใบสั่งซื้อ(ID)<input type="text" name="ID"/></label><br>
+    <label>เลขใบสั่งซื้อ (ID)  <input type="text" name="ID"/></label><br>
 
-    <label>วันที่ทำการสั่งซื้อ(Date)<input type="date" name="date" value="<?php echo date("Y-m-d");?>"/></label>
+    <label>วันที่ทำการสั่งซื้อ (Date)  <input type="date" name="date" value="<?php echo date("Y-m-d");?>"/></label><br>
     
-    <label>รหัสพนักงาน(Emp_ID)<select name="empID">
+    <label>รหัสพนักงาน (Emp_ID)  <select name="ID">
     <?php foreach($Employee_List as $E)
     {
-        echo "<option value=$E->empID > $E->empID</option>";
+        echo "<option value=$E->ID > $E->ID</option>";
     }?>
     </select></label><br>
 
-    <label>รหัสลูกค้า(Cus_ID)<select name="cusID">
+    <label>รหัสลูกค้า (Cus_ID)  <select name="ID">
     <?php foreach($Customer_List as $C)
     {
-        echo "<option value=$C->Cus_ID > $C->Cus_ID</option>";
+        echo "<option value=$C->ID > $C->ID</option>";
     }?>
     </select></label><br>
 
-    <label>รูปแบบการชำระเงิน(มัดจำ/เครดิต)<input type="text" name="payment"/></label>
+    <label>รูปแบบการชำระเงิน (มัดจำ/เครดิต)  <input type="text" name="payment"/></label><br>
     
-    <label>จำนวนเปอร์เซ็นต์มัดจำ(เครดิต=0)<input type="number" name="percent"/></label>
+    <label>เปอร์เซ็นต์มัดจำ (Percent)  <input type="number" name="percent"/></label><br>
 
-    <input type="hidden" name="controller" value="Quotation"/>
+    <input type="hidden" name="controller" value="Quotation"/><br>
     <button type="submit" name="action" value="index_Quotation">Back</button>
     <button type="submit" name="action" value="add">Save</button>
 </form>
