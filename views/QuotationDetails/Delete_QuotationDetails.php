@@ -5,6 +5,6 @@
 <form method="get" action="">
     <input type="hidden" name="controller" value="QuotationDetails"/>
     <input type="hidden" name="ID" value="<?php echo $QuotationDetails->ID;?>"/>
-    <button type="submit" name="action" value="index">Back</button>
+    <button type="submit" name="action" value="index_QuotationDetails">Back</button>
     <button type="submit" name="action" value="Delete">Delete</button>
 </form>
