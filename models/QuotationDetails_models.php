@@ -48,20 +48,19 @@
         require("connection_close.php");
         return $QuotationDetailslist;
     }
-
-    public static function add($ID,$Q_ID,$P_ID,$Color_ID,$NumOfProduct,$NumColorScreen){
+    public static function add($ID,$Q_ID,$P_ID,$Color_ID,$NumOfProduct,$NumColorScreen)
+    {
         require("connection_connect.php");
-        $sql ="INSERT INTO 'Product_list' ('PL_ID','Q_ID','P_ID','Color_ID','NumOfProduct','NumColorScreen')
-        VALUES('$ID','$Q_ID','$P_ID','$Color_ID','$NumOfProduct','$NumColorScreen')";
-        $result=$conn->query($sql);
+        $sql = "INSERT INTO `Product_list`(`PL_ID`,`Q_ID`,`P_ID`,`Color_ID`,`NumOfProduct`,`NumColorScreen`) VALUES ('$ID','$Q_ID','$P_ID','$Color_ID','$NumOfProduct','$NumColorScreen')";
+        $result = $conn->query($sql);
         require("connection_close.php");
-        echo"vvsssssss";
         return ;
 
     }
     public static function update($ID,$Q_ID,$P_ID,$Color_ID,$NumOfProduct,$NumColorScreen){
         require("connection_connect.php");
         $sql="UPDATE Product_list SET PL_ID='$ID',Q_ID=$Q_ID,P_ID='$P_ID',Color_ID='$Color_ID',NumOfProduct='$NumOfProduct',NumColorScreen='$NumColorScreen')";
+        $result = $conn->query($sql);
         require("connection_close.php");
         return "Update success $result rows";
     }
