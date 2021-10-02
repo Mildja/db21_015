@@ -16,7 +16,7 @@
         public static function getAll(){
             $ColorList = [];
             require("connection_connect.php");
-            $sql = "SELECT P_ID,P_name ,Color.Color_name,Color.Color_ID FROM Detail_Product JOIN Color ON Color.Color_ID=Detail_Product.Color_ID JOIN Product USING(P_ID)";
+            $sql = "SELECT P_ID,P_name ,Color.Color_name,Detail_Product.Color_ID FROM Detail_Product JOIN Color ON Color.Color_ID=Detail_Product.Color_ID JOIN Product USING(P_ID)";
             $result = $conn->query($sql);
             while ($my_row = $result->fetch_assoc()) {
                 $P_ID = $my_row["P_ID"];
