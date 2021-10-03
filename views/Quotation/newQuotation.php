@@ -12,6 +12,7 @@
     <label>รหัสพนักงาน (Emp_ID)  <select name="empID">
     <?php foreach($Employee_List as $E)
     {
+        if($E->position=='ฝ่ายขาย')
         echo "<option value=$E->ID > $E->ID</option>";
     }?>
     </select></label><br>
