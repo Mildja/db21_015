@@ -21,7 +21,7 @@ class Quotation{
     {
         $QuotationList = [];
         require("connection_connect.php");
-        $sql = "SELECT * from Quotation Natural JOIN customer Natural JOIN Employee ";
+        $sql = "SELECT * from Quotation Natural JOIN customer Natural JOIN Employee order by Q_ID";
         $result = $conn->query($sql);
         while($row = $result->fetch_assoc())
         {
