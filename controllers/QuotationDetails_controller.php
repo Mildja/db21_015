@@ -37,9 +37,9 @@
         }
         public function search()
     {
-        $key=$_GET['key'];
-        $QuotationDetails_list= QuotationDetails::search($key);
-        require_once("./views/QuotationDetails/:index_QuotationDetails.php");
+        $key = $_GET['key'];
+        $QuotationDetails_list = QuotationDetails::search($key);
+        require_once("./views/QuotationDetails/index_QuotationDetails.php");
     }
         /*public function update()
         {
