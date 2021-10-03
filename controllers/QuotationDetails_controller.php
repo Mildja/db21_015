@@ -10,6 +10,7 @@
         {
             $Quotation_List = Quotation::getAll();
             $Color_List = Color::getAll();
+            $Product_List = Product::getAll();
             require_once("./views/QuotationDetails/NewQuotationDetails.php");
         }
         public function addQuotationDetails()
@@ -41,11 +42,26 @@
         $QuotationDetails_list = QuotationDetails::search($key);
         require_once("./views/QuotationDetails/index_QuotationDetails.php");
     }
-        /*public function update()
-        {
-                $ID=$_GET['QD_ID'];
-                $QuotationDetails = QuotationDetails::get($ID);
+    public function updatefrom()
+    {
+        $ID=$_GET['ID'];
+        $QuotationDetails = QuotationDetails::get($ID);
+        $Quotation_List = Quotation::getAll();
+        $Color_List = Color::getAll();
+        $Product_List = Product::getAll();
+        require_once("./views/QuotationDetails/updatefrom.php");
+    }
 
-        }*/
+    public function update()
+    {
+        $ID = $_GET['ID'];
+        $Q_ID = $_GET['Q_ID'];
+        $P_ID= $_GET['P_ID'];
+        $Color_ID = $_GET['Color_ID'];
+        $NumOfProduct = $_GET['NumOfProduct'];
+        $NumColorScreen = $_GET['NumColorScreen'];
+        QuotationDetails::update($ID,$Q_ID,$P_ID,$Color_ID,$NumOfProduct,$NumColorScreen);
+        QuotationDetails_controller::index_QuotationDetails();
+    }
 
 }?>
