@@ -54,7 +54,7 @@ foreach($Quotation_List as $Quotation)
         <td>$Quotation->payment</td>
         <td>$Quotation->percent</td>
         <td><a href=?controller=Quotation&action=updateForm&Q_ID=$Quotation->ID>Update</a></td>
-        <td><a href=?controller=Quotation&action=delete&Q_ID=$Quotation->ID>Delete</a></td>
+        <td><a href=?controller=Quotation&action=deleteConfirm&Q_ID=$Quotation->ID>Delete</a></td>
 
     </tr>";
 }
