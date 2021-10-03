@@ -1,4 +1,8 @@
 <div Align ="Center">
+<br><br>
+<img src="https://www.thaihealth.or.th/data/content/2014/02/19697/cms/aehorsuwxyz4.jpg" width="500" height="250">
+<br><br>
+
 <form method="get" action="">
 <label> รหัสรายละเอียด <input type="text" name="PL_ID"/> </label><br>
 
