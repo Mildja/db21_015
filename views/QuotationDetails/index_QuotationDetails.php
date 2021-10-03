@@ -26,6 +26,7 @@ tr:hover{background-color:#f5f5f5}
 
         <table style="width:80%">
         สร้างรายละเอียดใบสั่งซื้อ <a href=?controller=QuotationDetails&action=NewQuotationDetails> click</a><br>
+        <p>วีรยา ศรีรุจิเมธากร 6220504780</p>
         <br>
         
         <tr bgcolor = "pink">
