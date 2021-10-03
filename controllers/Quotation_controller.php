@@ -56,16 +56,16 @@ class QuotationController
             QuotationController::index_Quotation();
     }
 
-    public function deleteConfirm()
+    public function delete_Quotation()
     {
         $ID = $_GET['Q_ID'];
         $Quotation = Quotation::get($ID);
-        require_once('./views/Quotation/deleteConfirm.php');
+        require_once('./views/Quotation/delete_Quotation.php');
     }
 
-    public function delete()
+    public function Delete()
     {
-        $ID=$_GET['Q_ID'];
+        $ID=$_GET['ID'];
         Quotation::delete($ID);
         QuotationController::index_Quotation();
     }
