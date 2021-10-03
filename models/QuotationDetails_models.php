@@ -72,5 +72,40 @@
         require("connection_close.php");
         return "Delete success $result rows";
     }
+    public static function search($key)
+    {
+        $quotationDetailList = [];
+        require("connection_connect.php");
+        $sql = "SELECT PL_ID,
+        Q_ID,P_ID,Product_list.Color_ID,
+        Product_list.NumOfProduct,
+        Product_list.NumColorScreen
+        P_name,
+        Product.C_name,
+        Product.P_manage,
+        Color.Color_name,
+        Quotation.Emp_ID
+        
+        FROM Color JOIN Detail_Product USING (Color_ID)
+        JOIN Product USING(P_ID) JOIN Product_list USING(P_ID)JOIN Quotation USING(Q_ID)
+        WHERE PL_ID LIKE '%$key%' OR Q_ID LIKE '%$key%' OR P_ID LIKE '%$key%' OR Product_list.Color_ID LIKE '%$key%'OR Product_list.NumOfProduct LIKE '%$key%' OR Product_list.NumColorScreen LIKE '%$key%' OR P_name LIKE '%$key%' OR Product.C_name LIKE '%$key%' OR Product.P_manage LIKE '%$key%' OR Product_list.Color_ID LIKE '%$key%'OR Product_list.NumOfProduct LIKE '%$key%' OR Color.Color_name LIKE '%$key%' OR Quotation.Emp_ID LIKE '%$key%')";
+       
+       $result = $conn->query($sql);
+        while ($my_row = $result->fetch_assoc()) {
+            $ID = $my_row["PL_ID"];
+            $Q_ID = $my_row["Q_ID"];
+            $P_ID = $my_row["P_ID"];
+            $Color_ID = $my_row["Color_ID"];
+            $NumOfProduct = $my_row["NumOfProduct"];
+            $NumColorScreen = $my_row["NumColorScreen"];
+
+
+            //$quotationDetailList[] = new QuotationDetail();
+        }
+        require("connection_close.php");
+        return $quotationDetailList;
+    }
+
+
     }
 ?>
