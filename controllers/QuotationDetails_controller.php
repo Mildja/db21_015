@@ -35,6 +35,12 @@
             QuotationDetails::delete($ID);
             QuotationDetails_controller::index_QuotationDetails();
         }
+        public function search()
+    {
+        $key=$_GET['key'];
+        $QuotationDetails_list= QuotationDetails::search($key);
+        require_once("./views/QuotationDetails/:index_QuotationDetails.php");
+    }
         /*public function update()
         {
                 $ID=$_GET['QD_ID'];
