@@ -59,7 +59,7 @@
     }
     public static function update($ID,$Q_ID,$P_ID,$Color_ID,$NumOfProduct,$NumColorScreen){
         require("connection_connect.php");
-        $sql="UPDATE Product_list SET PL_ID='$ID',Q_ID=$Q_ID,P_ID='$P_ID',Color_ID='$Color_ID',NumOfProduct='$NumOfProduct',NumColorScreen='$NumColorScreen')";
+        $sql="UPDATE Product_list SET Q_ID='$Q_ID',P_ID='$P_ID',Color_ID='$Color_ID',NumOfProduct='$NumOfProduct',NumColorScreen='$NumColorScreen' WHERE PL_ID='$ID'";
         $result = $conn->query($sql);
         require("connection_close.php");
         return "Update success $result rows";
