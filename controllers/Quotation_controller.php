@@ -58,7 +58,7 @@ class QuotationController
 
     public function delete_Quotation()
     {
-        $ID = $_GET['Q_ID'];
+        $ID = $_GET['ID'];
         $Quotation = Quotation::get($ID);
         require_once('./views/Quotation/delete_Quotation.php');
     }
