@@ -21,6 +21,8 @@ tr:hover{background-color:#f5f5f5}
 </head>
 <body>
     <br>
+     <p>นภัส เจียมประเสริฐ 6220502132</p>
+     
     <form method="GET" action="">
         <input type="text" name="key">
         <input type="hidden" name="controller" value="Quotation"/>
@@ -28,7 +30,7 @@ tr:hover{background-color:#f5f5f5}
     </form>
 
     Add Quotation <a href="?controller=Quotation&action=newQuotation">Click</a>
-    <h7>นภัส เจียมประเสริฐ 6220502132</h7>
+   
 
 <br>
 <table style="width:80%">
