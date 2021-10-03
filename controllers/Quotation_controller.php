@@ -55,4 +55,20 @@ class QuotationController
             Quotation::update($ID,$date,$empID,$cusID,$payment,$percent);
             QuotationController::index_Quotation();
     }
+
+    public function deleteConfirm()
+    {
+        $ID = $_GET['Q_ID'];
+        $Quotation = Quotation::get($ID);
+        require_once('./views/Quotation/deleteConfirm.php');
+    }
+
+    public function delete()
+    {
+        $ID=$_GET['Q_ID'];
+        Quotation::delete($ID);
+        QuotationController::index_Quotation();
+    }
+
+
 }?>
