@@ -1,4 +1,7 @@
 <div Align ="Center">
+<br><br>
+<img src="https://www.afscmemd.org/sites/default/files/styles/kobol_teaser/public/actions/website-update_0.jpg?itok=_n24lk8E&c=f95c79a8a84fcb4a451336d0c5e9ea63" width="500" height="250">
+<br><br>
 <form method = "get" action = "">
 
     <label>รหัสรายละเอียด (PL_ID)  <input type="text" name="ID"
