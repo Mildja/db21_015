@@ -3,7 +3,7 @@
 <img src="https://i.pinimg.com/736x/d5/62/21/d56221fbed03e1b99a66f819952aa9f8.jpg" width="200" height="200">
 <br>
 <?php echo "<br>Are u sure to DELETE this Quotation (?)";?><br><br>
-<table style="width:80%">
+<table style="width:50%">
     <tr bgcolor = "lightblue">
             <td>ID</td>
             <td>Date</td>
