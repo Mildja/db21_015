@@ -66,8 +66,8 @@
     }
 
     public static function delete($ID){
-        require("connection_connect.php");
-        $sql = "DELETE * FROM Product_list WHERE PL_ID='$ID'";
+        require_once("connection_connect.php");
+        $sql = "DELETE FROM Product_list WHERE PL_ID='$ID'";
         $result = $conn->query($sql);
         require("connection_close.php");
         return "Delete success $result rows";
