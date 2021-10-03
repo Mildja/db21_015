@@ -18,7 +18,11 @@ tr:hover{background-color:#f5f5f5}
 </head>
 <body>
 
-
+        <form method="GET" action="">
+        <input type="text" name="key">
+        <input type="hidden" name="controller" value="QuotationDetails"/>
+        <button type="submit" name="action" value="search">Search</button>
+         </form>
 
         <table style="width:80%">
         สร้างรายละเอียดใบสั่งซื้อ <a href=?controller=QuotationDetails&action=NewQuotationDetails> click</a><br>
